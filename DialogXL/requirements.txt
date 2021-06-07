@@ -1,0 +1,4 @@
+torch==1.4.0
+transformers==4.3.3
+scikit-learn==0.23.1
+sentencepiece
