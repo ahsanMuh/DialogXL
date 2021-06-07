@@ -105,7 +105,8 @@ if __name__ == '__main__':
 
     # loading model...
     print('Loading model from: {}'.format(modelPath))
-    model.load_state_dict(torch.load(modelPath))
+    # updated torch.load to map on cpu due to cuda version change
+    model.load_state_dict(torch.load(modelPath, map_location=torch.device('cpu')))
 
     print('Begin evaluation')
     valid_loss, valid_acc, _, _, valid_fscore= train_or_eval_model_for_transfo_xl(model, loss_function,
