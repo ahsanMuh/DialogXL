@@ -54,8 +54,8 @@ if __name__ == '__main__':
     path = './saved/IEMOCAP/'
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('--bert_model_dir', type=str, default='/data/SHENWZH/models/xlnet_base/')
-    parser.add_argument('--bert_tokenizer_dir', type=str, default='/data/SHENWZH/models/xlnet_base/')
+    parser.add_argument('--bert_model_dir', type=str, default='xlnet-base-cased')
+    parser.add_argument('--bert_tokenizer_dir', type=str, default='./xlnet-base-cased/')
 
     parser.add_argument('--model_save_dir', type =str, default='saved_models/')
 
