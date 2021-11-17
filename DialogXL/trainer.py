@@ -29,7 +29,7 @@ def train_or_eval_model_for_transfo_xl(model, loss_function, dataloader, epoch, 
     assert not train or optimizer != None
     if train:
         model.train()
-        # dataloader = tqdm(dataloader)
+        dataloader = tqdm(dataloader)
     else:
         model.eval()
 
